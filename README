@@ -1,0 +1,12 @@
+This builds an image for mysql data volume container. creates volumes of "/var/lib/mysql" by default.
+Run following command to building it.
+
+$ sudo docker build -t "your repository/image name:tag"
+
+Run following command to launch new mysql data volume container with above image.
+
+$ sudo docker run -d --name "your repository/container name:tag" "your repository/image name:tag"
+
+Run following command to launch new container with mysql data volume contariner.
+
+$ sudo docker run -d --name "your repository/container name:tag" --volumes-from "mysql data volume container name" "image name you want to launch"
